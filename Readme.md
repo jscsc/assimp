@@ -1,5 +1,8 @@
 Open Asset Import Library (assimp)
 ==================================
+```
+jonestristand fork - stripped most of the non-core functionality and switched to compile a static library using premake5 for integration with UllrEngine
+```
 A library to import and export various 3d-model-formats including scene-post-processing to generate missing render data.
 ### Current project status ###
 [![Linux Build Status](https://travis-ci.org/assimp/assimp.svg)](https://travis-ci.org/assimp/assimp)
