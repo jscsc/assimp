@@ -25,6 +25,8 @@ project "assimp"
     "contrib/openddlparser/code/*.cpp",
     "contrib/poly2tri/poly2tri/**.cc",
     "contrib/clipper/*.cpp",
+    "contrib/zlib/*.c",
+    "contrib/zlib/*.h"
   }
 
   includedirs {
