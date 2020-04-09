@@ -1,8 +1,7 @@
-project "assimp"
+project "Assimp"
   kind "StaticLib"
   language "C++"
   cppdialect "C++17"
-  systemversion "latest"
   staticruntime "On"
 
   targetdir ("bin/" .. outputdir .. "/%{prj.name}")
@@ -46,23 +45,14 @@ project "assimp"
 
   filter "system:windows"
     systemversion "latest"
-    cppdialect "C++17"
-    staticruntime "On"
 
     buildoptions { "/bigobj" }
     defines { "_CRT_SECURE_NO_WARNINGS" }
 
   filter "configurations:Debug"
-    defines "ULLR_DEBUG"
     runtime "Debug"
     symbols "on"
 
   filter "configurations:Release"
-    defines "ULLR_RELEASE"
-    runtime "Release"
-    optimize "on"
-
-  filter "configurations:Dist"
-    defines "ULLR_DIST"
     runtime "Release"
     optimize "on"
