@@ -9,12 +9,15 @@ project "Assimp"
 
   warnings "Off"
 
-  defines {
+  defines
+  {
     "ASSIMP_BUILD_NO_C4D_IMPORTER", -- Cinema4D is MSVC only and needs some weird headers to work
     "OPENDDL_STATIC_LIBARY",
+    "_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING"
   }
 
-  files {
+  files
+  {
     "code/**.cpp",
     "code/**.h",
     "contrib/irrXML/*.cpp",
@@ -28,7 +31,8 @@ project "Assimp"
     "contrib/zlib/*.h"
   }
 
-  includedirs {
+  includedirs
+  {
     "config/",
     "include/",
     "contrib/irrXML/",
@@ -39,7 +43,8 @@ project "Assimp"
     "./"
   }
 
-  removefiles {
+  removefiles
+  {
     "code/Importer/IFC/IFCReaderGen_4.*",
   }
 
